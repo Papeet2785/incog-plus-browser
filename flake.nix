@@ -1,10 +1,8 @@
 {
   description = "Python PyQt6 file browser environment";
-
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs?ref=nixos-unstable";
   };
-
   outputs = { self, nixpkgs }:
     let
       system = "x86_64-linux";
@@ -26,7 +24,6 @@
           pkg-config
           glib
         ];
-
         env = {
           QT_QPA_PLATFORM = "wayland;xcb";
         };
